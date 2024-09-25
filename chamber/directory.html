@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directory of businesses and organizations that are members of the Lagos Mainland Chamber of Commerce.">
+    <meta name="author" content="Awe Samuel Opeoluwa">
+    <title>Directory - Lagos Mainland Chamber of Commerce</title>
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="Lagos Mainland Chamber of Commerce - Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://freeimage.host/i/dsakpEX">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <button id="toggleView" data-view="grid">Switch to List View</button>
+        <div id="memberContainer"></div>
+    </main>
+    <footer>
+        <p>Lagos Mainland Chamber of Commerce | Contact: info@lagos.org | (223) 555-2300</p>
+        <p>Project by: Samuel Awe | Last modified: <span id="lastModified"></span></p>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+    <script>
+        async function fetchMembers(viewType = 'grid') {
+            try {
+                const response = await fetch('scripts/members.json');
+                const members = await response.json();
+                displayMembers(members,'grid');
+            } catch (error) {
+                console.error('Error fetching members:', error);
+            }
+        }
+
+        function displayMembers(members, viewType) {
+            const container = document.getElementById('memberContainer');
+            container.innerHTML = '';
+
+            if (viewType === 'grid') {
+                members.forEach(member =>
+                    {
+                        const card = `
+                        <div class="member-card">
+                            <img src="images/${member.image}" alt="${member.name}">
+                            <h2>${member.name}</h2>
+                            <p>${member.address}</p>
+                            <p>${member.phone}</p>
+                            <p><a href="${member.website}" target="_blank">${member.website}</a></p>
+                            <p>MembershipLevel: ${getMembershipLevel(member.getMembershipLevel)}</p>
+                        </div>`;
+                        container.innerHTML += card;
+                    }
+                );
+            } else {
+                members.forEach(member => 
+                    {
+                        const listItem = ` 
+                        <div class="member-list-item">
+                            <h2>${member.name}</h2>
+                            <p>${member.address}</p>
+                            <p>${member.phone}</p>
+                            <p><a href="${member.website}" target="_blank">${member.website}</a></p>
+                        </div>`;
+                        container.innerHTML += listItem;
+                    }
+                );
+            }
+        }
+
+        function getMembershipLevel(level) {
+            switch (level) {
+                case 1: return 'Member';
+                case 2: return 'Silver';
+                case 3: return 'Gold';
+                default: return 'Unknown';
+            }
+        }
+
+        document.getElementById('toggleView').addEventListener('click', function()
+    {
+        const currentView = this.getAttribute('data-view');
+        const newView = currentView === 'grid' ? 'list' : 'grid'; this.setAttribute('data-view', newView);
+        this.textContent = newView === 'grid' ? 'Switch to List View' : 'Switch to Grid View';
+        fetchMembers(newView);
+    });
+
+    window.onload = function() {
+        fetchMembers('grid');
+    };
+    </script>
