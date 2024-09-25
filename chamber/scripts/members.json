@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Maria's Boutique",
+        "address": "123 Main St, Timbuktu",
+        "phone": "800-555-1234",
+        "website": "http://mariaboutique.com",
+        "image": "marias.jpg",
+        "membershipLevel": 1
+    },
+    {
+        "name": "Diego's Tech Solutions",
+        "address": "456 Innovation Blvd, Timbuktu",
+        "phone": "800-555-5678",
+        "website": "http://diegotech.com",
+        "image": "diegotech.jpg",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Francisco's Cafe",
+        "address": "789 Coffee Lane, Timbuktu",
+        "phone": "800-555-7890",
+        "website": "http://franciscocafe.com",
+        "image": "francisco-cafe.jpg",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Green Energy Corp",
+        "address": "101 Eco Park, Timbuktu",
+        "phone": "800-555-2468",
+        "website": "http://greenenergycorp.com",
+        "image": "greenenergy.jpg",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Smart Health Clinic",
+        "address": "321 Wellness St, Timbuktu",
+        "phone": "800-555-1357",
+        "website": "http://smarthealth.com",
+        "image": "smarthealth.jpg",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Creative Co-op",
+        "address": "654 Design Ave, Timbuktu",
+        "phone": "800-555-0246",
+        "website": "http://creativecoop.com",
+        "image": "creative-coop.jpg",
+        "membershipLevel": 1
+    },
+    {
+        "name": "Timbuktu Adventures",
+        "address": "987 Explorer Rd, Timbuktu",
+        "phone": "800-555-3698",
+        "website": "http://timbuktuadventures.com",
+        "image": "timbuktu-adventures.jpg",
+        "membershipLevel": 3
+    }
+]

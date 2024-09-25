@@ -41,3 +41,14 @@ wddBtn.addEventListener('click', () => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const calculateTotalCredits = () => {
+        const courses = document.querySelectorAll('.course');
+        let totalCredits = Array.from(courses).reduce((total, course) => {
+            return total + parseInt(course.getAttribute('data-credits'), 10);
+        }, 0);
+document.getElementById('totalCredits').textContent = totalCredits;
+    };
+    calculateTotalCredits();
+});

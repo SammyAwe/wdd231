@@ -4,11 +4,12 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #2c517b;
+    color: white;
 }
 header {
     background-color: #2c517b;
-    color: white;
+    color: #white;
     text-align: center;
     padding: 1rem;
 }
@@ -18,15 +19,19 @@ header {
     height: 100px;
 }
 nav ul {
+    display: flex;
+    justify-content: center;
     list-style-type: none;
     padding: 0;
 }
 nav ul li {
-    display: inline-block;
     margin-right: 20px;
 }
+nav ul li:last-child {
+    margin-right: 0;
+}
 nav ul li a {
-    color: white;
+    color: #f0e68c;
     text-decoration: none;
     font-weight: bold;
 }
