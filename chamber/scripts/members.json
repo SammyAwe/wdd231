@@ -12,7 +12,7 @@
         "address": "27 Opebi, Lagos",
         "phone": "800-555-5678",
         "website": "http://Macktech.com",
-        "image": "macktech.jpg",
+        "image": "mcconkie.jpg",
         "membershipLevel": 3
     },
     {
@@ -20,7 +20,7 @@
         "address": "25 Toyin Lane, Lagos",
         "phone": "800-555-7890",
         "website": "http://toyincafe.com",
-        "image": "toyincafe.jpg",
+        "image": "jessica.jpg",
         "membershipLevel": 2
     },
     {
@@ -28,7 +28,7 @@
         "address": "11 Abiola Park, Lagos",
         "phone": "800-555-2468",
         "website": "http://leroycorp.com",
-        "image": "leroycorp.jpg",
+        "image": "leroy.jpg",
         "membershipLevel": 3
     },
     {
@@ -44,7 +44,7 @@
         "address": "65 Bucknor,  Lagos",
         "phone": "800-555-0246",
         "website": "http://dianaclothings.com",
-        "image": "dianaclothings.jpg",
+        "image": "diana.jpg",
         "membershipLevel": 1
     },
     {
@@ -52,7 +52,7 @@
         "address": "9 Ajibulu St, Lagos",
         "phone": "800-555-3698",
         "website": "http://ajibuluventures.com",
-        "image": "ajibuluventures.jpg",
+        "image": "ajibulu.jpg",
         "membershipLevel": 3
     }
 ]
