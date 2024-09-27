@@ -1,42 +1,140 @@
-:root {
-    --primary-color: #4CAF50;
-    --secondary-color: #333333;
-    --background-color: #f4f4f4;
-    --text-color: #000000;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body {
-    font-family: Arial, sans-serif;
-    color: var(--text-color);
-    background-color: var(--background-color);
+body, html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f8fa;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
 }
-header, footer {
-    background-color: var(--primary-color);
-    color: white;
+header {
+    background-color: #004080;
+    color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-nav ul {
+header nav ul {
     display: flex;
+    justify-content: center;
     list-style: none;
 }
-nav ul li {
-    margin-right: 20px;
+header nav ul li {
+    margin: 0 20px;
 }
+header nav ul li a {
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+header nav ul li a:hover {
+    background-color: #00509E;
+    border-radius: 5px;
+}
+
+button#toggleView {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px;
+    display: block;
+    width: auto;
+    transition: background-color 0.3s ease;
+}
+
+button#toggleView:hover {
+    background-color: #005bb5;
+}
+
 #memberContainer {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: space-around;
+    margin: 40px;
 }
-.member-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    max-width: 300px;
-    text-align: center;
+.member-card, .member-list-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.member-list-item {
-    border-bottom: 1px solid #ccc;
-    padding: 10px;
+.member-card:hover, .member-list-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
-.member-card img, .member-list-item img {
+.member-card img {
     max-width: 100%;
-    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.member-card h2, .member-list-item h2 {
+    color: #004080;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.member-card p, .member-list-item p {
+    color: #555555;
+    margin-bottom: 8px;
+}
+.member-card a, .member-list-item a {
+    color: #0073e6;
+    font-weight: bold;
+    text-decoration: none;
+}
+.member-card a:hover, .member-list-item a:hover {
+    text-decoration: underline;
+}
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.list-view {
+    display: block;
+}
+footer {
+    background-color: #004080;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+footer p {
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 768px)
+{
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    #memberContainer {
+        margin: 20px;
+        grid-template-columns: 1fr;
+    }
+    button#toggleView {
+        width: 100%;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 15px;
+    color: #004080;
+}
+a {
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #00509E;
 }

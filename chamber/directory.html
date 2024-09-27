@@ -52,6 +52,8 @@
             container.innerHTML = '';
 
             if (viewType === 'grid') {
+                container.classList.remove('list-view');
+                container.classList.add('grid-view');
                 members.forEach(member =>
                     {
                         const card = `
@@ -66,7 +68,9 @@
                         container.innerHTML += card;
                     }
                 );
-            } else {
+            } else if (viewType === 'list') {
+                container.classList.remove('grid-view');
+                container.classList.add('list-view');
                 members.forEach(member => 
                     {
                         const listItem = ` 
@@ -99,7 +103,5 @@
         fetchMembers(newView);
     });
 
-    window.onload = function() {
-        fetchMembers('grid');
-    };
+    window.onload = fetchMembers;
     </script>
