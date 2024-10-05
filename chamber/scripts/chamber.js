@@ -35,9 +35,9 @@ console.error("Weather Fetch Error:", error);
     fetchWeather();
 
     const featuredMembers = [
-        { name: 'Maxwell Consults', description: 'Leaders in consulting.', website: 'http://maxiconsults.com' },
-        { name: 'Leroy Corp', description: 'Pioneers in tech solutions.', website: 'http://leroycorp.com' },
-        { name: 'Helraph Clinic', description: 'Your trusted health partner.', website: 'http://helraph.com' }
+        { name: 'Maxwell Consults', description: 'Leaders in consulting.', website: 'https://sammyawe.github.io/WDD231/chamber/directory.html' },
+        { name: 'Leroy Corp', description: 'Pioneers in tech solutions.', website: 'https://sammyawe.github.io/WDD231/chamber/directory.html' },
+        { name: 'Helraph Clinic', description: 'Your trusted health partner.', website: 'https://sammyawe.github.io/WDD231/chamber/directory.html' }
     ];
     const displaySpotlight = () => {
         const spotlightContainer = document.getElementById('spotlight-Container');
