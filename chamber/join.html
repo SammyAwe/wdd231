@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the Lagos Mainland Chamber of Commerce">
+    <meta name="author" content="Awe Samuel Opeoluwa">
+    <title>Home - Lagos Mainland Chamber of Commerce</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/join.css">
+    <meta property="og:title" content="Lagos Mainland Chamber of Commerce - Home">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero-image.jpg">
+</head> 
+<body> 
+    <header> 
+    <nav> 
+        <ul> 
+            <li><a href="index.html">Home</a></li> 
+            <li><a href="join.html">Join Us</a></li> 
+            <li><a href="about.html">About</a></li> 
+            <li><a href="contact.html">Contact</a></li> 
+        </ul> 
+    </nav> 
+    </header>
+    <main> 
+        <h2>Join Us</h2> 
+        <form action="thankyou.html" method="GET">
+         
+        <label for="firstName">First Name:</label> 
+        <input type="text" id="firstName" name="firstName" title="First Name" required autocomplete="given-name"> 
+        
+         <label for="lastName">Last Name:</label> 
+         <input type="text" id="lastName" name="lastName" title="Last Name" required autocomplete="family-name"> 
+         
+          <label for="orgTitle">Organizational Title:</label> 
+          <input type="text" id="orgTitle" name="orgTitle" title="Organizational Title" required autocomplete="organization-title" pattern="[A-Za-z-\s]{7,}"> 
+          
+           <label for="email">Email:</label> 
+           <input type="email" id="email" name="email" title="Email Address" required autocomplete="email" placeholder="example@domain.com"> 
+           
+            <label for="phone">Mobile Phone:</label> 
+            <input type="tel" id="phone" name="phone" title="Mobile Phone" required autocomplete="tel"> 
+             <label for="orgName">Organization Name:</label> 
+             <input type="text" id="orgName" name="orgName" title="Organization Name" autocomplete="organization" required> 
+              <label for="membership">Membership Level:</label> 
+              <select id="membership" name="membership" title="Membership Level" required> 
+                <option value="NP">NP Membership (Non-Profit, No Fee)</option> 
+                <option value="Bronze">Bronze Membership</option> 
+                <option value="Silver">Silver Membership</option> 
+                <option value="Gold">Gold Membership</option> 
+            </select> 
+             <label for="orgDesc">Organization Description:</label> 
+             <textarea id="orgDesc" name="orgDesc" title="Organization Description"></textarea> 
+              <input type="hidden" id="timestamp" name="timestamp"> 
+               <input type="submit" value="Submit Application"> </form> 
+               <h2>Membership Levels</h2> 
+               <div class="membership-cards"> 
+                <div class="membership-card"> 
+                <h3>NP Membership</h3> 
+                <p>No fee for non-profit organizations.</p> 
+                <a href="#npModal">More Info</a> 
+            </div> 
+            <div class="membership-card"> 
+                <h3>Bronze Membership</h3> 
+                <p>Basic membership with limited benefits.</p> 
+                <a href="#bronzeModal">More Info</a> 
+            </div> 
+            <div class="membership-card"> 
+                <h3>Silver Membership</h3> 
+                <p>Enhanced benefits at a competitive rate.</p> 
+                <a href="#silverModal">More Info</a> 
+            </div> 
+            <div class="membership-card"> 
+                <h3>Gold Membership</h3> 
+                <p>Premium benefits and top-tier support.</p> 
+                <a href="#goldModal">More Info</a>
+            </div> 
+            </div> 
+            <div id="npModal" class="modal"> 
+                <div class="modal-content"> <span class="close">&times;</span> 
+                    <h2>NP Membership Benefits</h2> 
+                    <p>Access to special events, training, and discounts.</p> 
+                </div> 
+            </div> 
+            <div id="bronzeModal" class="modal"> 
+                <div class="modal-content"> <span class="close">&times;</span> 
+                    <h2>Bronze Membership Benefits</h2> 
+                    <p>Includes special event access and newsletters.</p> 
+                </div> 
+            </div> 
+            <div id="silverModal" class="modal"> 
+                <div class="modal-content"> <span class="close">&times;</span> 
+                    <h2>Silver Membership Benefits</h2> 
+                    <p>Includes advertising options and event discounts.</p> 
+                </div> 
+            </div> 
+            <div id="goldModal" class="modal"> 
+                <div class="modal-content"> <span class="close">&times;</span> 
+                    <h2>Gold Membership Benefits</h2> 
+                    <p>Top-tier benefits including priority support and exclusive events.</p> 
+                </div> 
+            </div> 
+        </main> 
+        <footer> 
+            <p>Lagos Mainland Chamber of Commerce | Contact: info@lagos.org | +2349043529640</p>
+            <p>Project by: Samuel Awe | <span id="lastModifiedDisplay"></span></p>
+        </footer> 
+        <script> 
+        window.addEventListener('load', function() {
+            const timestampField = document.getElementById('timestamp');
+            const currentDateTime = newDate().toLocaleString();
+            timestampField.value = currentDateTime;
+        });
+         document.getElementById('timestamp').value = new Date().toISOString(); 
+         const modals = document.querySelectorAll('.modal'); 
+         const closeButtons = document.querySelectorAll('.close'); 
+         document.querySelectorAll('.membership-card a').forEach(link => { link.onclick = function(event) { event.preventDefault();
+          const modalId = this.getAttribute('href'); 
+          document.querySelector(modalId).style.display = 'block'; 
+          }; 
+          }); 
+          closeButtons.forEach(button => { button.onclick = function() { 
+            this.closest('.modal').style.display = 'none'; 
+            }; 
+            }); 
+            window.onclick = function(event) 
+            { if (event.target.classList.contains('modal')) { 
+                event.target.style.display = 'none'; 
+                } 
+                }; 
+            window.addEventListener('load', function() { 
+            document.querySelectorAll('.membership-card').forEach(card => { 
+            card.classList.add('loaded');
+             }); 
+         }); 
+         const lastModified = document.lastModified;
+         const formattedDate = new Date(lastModified).toLocaleString();
+         document.getElementById('lastModifiedDisplay').textContent = `Last modified: ${formattedDate}`;
+        </script> 
+</body> 
+</html>

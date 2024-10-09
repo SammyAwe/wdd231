@@ -1,0 +1,156 @@
+header {
+    background-color: #ffe5ec;
+    color: #ff5c8a;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 2px rgba(255, 92, 138, 0.6);
+}
+header p {
+    font-size: 1.2em;
+    color: #ff99ac;
+    margin-top: 10px;
+}
+main {
+    background-color: #fff0f6;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1000px;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+main h2 {
+    font-size: 2.2em;
+    color: #ff5c8a;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(255, 92, 138, 0.6);
+}
+main form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+main label {
+    font-size: 1.2em;
+    color: #ff7b9c;
+    display: block;
+}
+main input, main select, main textarea {
+    padding: 12px;
+    font-size: 1em;
+    border: 2px solid #ffb3c6;
+    border-radius: 10px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+main input[type="submit"] {
+    background-color: #ff5c8a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    transition: background-color 0.3s ease-in-out;
+}
+main input[type="submit"]:hover {
+    background-color: #ff99ac;
+}
+.membership-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+.membership-card { 
+    background-color: #ffb3c6;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    } 
+    .membership-card:hover {
+        transform: scale(1.05);
+    }
+.membership-card.loaded { 
+    opacity: 1;
+    transform: translateY(0); 
+    } 
+    
+.modal { 
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    } 
+.modal-content { 
+    background-color: #fefefe; 
+    margin: 15% auto; 
+    padding: 20px; 
+    border: 1px solid #888; 
+    width: 80%; 
+    } 
+.close { 
+    color: #aaa; 
+    float: right; 
+    font-size: 28px; 
+    font-weight: bold; 
+    } 
+.close:hover, .close:focus { 
+    color: black; 
+    text-decoration: none; 
+    cursor: pointer; 
+    }
+footer {
+    background-color: #ffe5ec;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Quicksand', sans-serif;
+    color: #ff5c8a;
+} 
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}
+footer a {
+    color: #ff7b9c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+footer a:hover {
+    color: #ff99ac;
+}
+footer .social-icons img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transfrom 0.3s ease-in-out;
+}
+footer .social-icons img:hover {
+    transform: scale(1.2);
+}
+@media (min-width: 768px) {
+    main form {
+        grid-template-columns: 1fr 1fr;
+    }
+    .membership-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
