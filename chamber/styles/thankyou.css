@@ -1,7 +1,6 @@
 body { 
     font-family: 'Arial', sans-serif; 
-    background-color: #ffe5ec;
-    background-color: #ff5c8a; 
+    background-color: #fff;
     color: #ff5c8a; 
     margin: 0; 
     padding: 20px; 
@@ -11,7 +10,7 @@ body {
 } 
 h1 { 
     font-size: 2.5rem; 
-    color: #ff99ac;  
+    color: #ff5c8a;  
     margin-bottom: 20px; 
     text-align: center; 
 } 
