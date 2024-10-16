@@ -1,7 +1,7 @@
 body { 
     font-family: 'Arial', sans-serif; 
-    background-color: #fff;
-    color: #ff5c8a; 
+    background-color: #2b3d52;
+    color: white; 
     margin: 0; 
     padding: 20px; 
     display: flex; 
@@ -10,7 +10,7 @@ body {
 } 
 h1 { 
     font-size: 2.5rem; 
-    color: #ff5c8a;  
+    color: white;  
     margin-bottom: 20px; 
     text-align: center; 
 } 
@@ -20,14 +20,14 @@ p {
     text-align: center; 
 } 
 strong { 
-    color: #ff5c8a;  
+    color: white;  
 } 
 span { 
     color: #ff7b9c;  
     font-weight: bold; 
 } 
 .container { 
-    background-color: #fff; 
+    background-color: #2b3d52; 
     border-radius: 10px; 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
     padding: 30px; 
@@ -42,7 +42,7 @@ span {
     color: #777;  
 } 
 .footer a { 
-    color: #ff5c8a; 
+    color: white; 
     text-decoration: none; 
 } 
 .footer a:hover { 

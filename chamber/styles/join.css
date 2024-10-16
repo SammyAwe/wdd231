@@ -1,6 +1,6 @@
 header {
-    background-color: #ffe5ec;
-    color: #ff5c8a;
+    background-color: #2b3d52;
+    color: white;
     text-align: center;
     padding: 20px;
     border-radius: 20px;
@@ -19,7 +19,7 @@ header p {
     margin-top: 10px;
 }
 main {
-    background-color: #fff0f6;
+    background-color: #2b3d52;
     border-radius: 20px;
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -30,7 +30,7 @@ main {
 }
 main h2 {
     font-size: 2.2em;
-    color: #ff5c8a;
+    color: white;
     margin-bottom: 20px;
     text-shadow: 1px 1px 2px rgba(255, 92, 138, 0.6);
 }
@@ -41,7 +41,7 @@ main form {
 }
 main label {
     font-size: 1.2em;
-    color: #ff7b9c;
+    color: white;
     display: block;
 }
 main input, main select, main textarea {
@@ -54,15 +54,15 @@ main input, main select, main textarea {
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 main input[type="submit"] {
-    background-color: #ff5c8a;
-    color: white;
+    background-color: #2b3d52;
+    color: purple;
     border: none;
     cursor: pointer;
     padding: 15px;
     transition: background-color 0.3s ease-in-out;
 }
 main input[type="submit"]:hover {
-    background-color: #ff99ac;
+    background-color: red;
 }
 .membership-cards {
     display: grid;
@@ -117,13 +117,13 @@ main input[type="submit"]:hover {
     cursor: pointer; 
     }
 footer {
-    background-color: #ffe5ec;
+    background-color: #2b3d52;
     padding: 20px;
     text-align: center;
     border-radius: 0 0 20px 20px;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'Quicksand', sans-serif;
-    color: #ff5c8a;
+    color: white;
 } 
 footer p {
     margin: 0;

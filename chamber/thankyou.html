@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Thank You - Lagos Mainland Chamber Of Commerce.</title>
     <link rel="stylesheet" href="styles/thankyou.css"> 
+    <script src="scripts/thankyou.js" defer></script>
 </head> 
 <body> 
     <h1>Thank You for Submitting the Form!</h1> 
@@ -15,16 +16,5 @@
     <p><strong>Phone Number:</strong> <span id="phoneDisplay"></span></p> 
     <p><strong>Organization:</strong> <span id="organizationDisplay"></span></p> 
     <p><strong>Submission Date:</strong> <span id="timestampDisplay"></span></p> 
-    <script>  
-    window.addEventListener('load', function() { 
-        const urlParams = new URLSearchParams(window.location.search); 
-        document.getElementById('firstNameDisplay').textContent = urlParams.get('firstName'); 
-        document.getElementById('lastNameDisplay').textContent = urlParams.get('lastName'); 
-        document.getElementById('emailDisplay').textContent = urlParams.get('email'); 
-        document.getElementById('phoneDisplay').textContent = urlParams.get('phone'); 
-        document.getElementById('organizationDisplay').textContent = urlParams.get('organization'); 
-        document.getElementById('timestampDisplay').textContent = urlParams.get('timestamp'); 
-        }); 
-    </script> 
 </body> 
 </html>

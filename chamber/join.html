@@ -8,6 +8,7 @@
     <title>Home - Join us - Lagos Mainland Chamber Of Commerce.</title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/join.js" defer></script>
     <meta property="og:title" content="Lagos Mainland Chamber of Commerce - Home">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/hero-image.jpg">
@@ -18,8 +19,8 @@
         <ul> 
             <li><a href="index.html">Home</a></li> 
             <li><a href="join.html">Join Us</a></li> 
-            <li><a href="about.html">About</a></li> 
-            <li><a href="contact.html">Contact</a></li> 
+            <li><a href="index.html">About</a></li> 
+            <li><a href="#footer">Contact Us</a></li> 
         </ul> 
     </nav> 
     </header>
@@ -103,41 +104,10 @@
                 </div> 
             </div> 
         </main> 
-        <footer> 
+        <footer id="footer"> 
             <p>Lagos Mainland Chamber of Commerce | Contact: info@lagos.org | +2349043529640</p>
             <p>Project by: Samuel Awe | <span id="lastModifiedDisplay"></span></p>
         </footer> 
-        <script> 
-        window.addEventListener('load', function() {
-            const timestampField = document.getElementById('timestamp');
-            const currentDateTime = newDate().toLocaleString();
-            timestampField.value = currentDateTime;
-        });
-         document.getElementById('timestamp').value = new Date().toISOString(); 
-         const modals = document.querySelectorAll('.modal'); 
-         const closeButtons = document.querySelectorAll('.close'); 
-         document.querySelectorAll('.membership-card a').forEach(link => { link.onclick = function(event) { event.preventDefault();
-          const modalId = this.getAttribute('href'); 
-          document.querySelector(modalId).style.display = 'block'; 
-          }; 
-          }); 
-          closeButtons.forEach(button => { button.onclick = function() { 
-            this.closest('.modal').style.display = 'none'; 
-            }; 
-            }); 
-            window.onclick = function(event) 
-            { if (event.target.classList.contains('modal')) { 
-                event.target.style.display = 'none'; 
-                } 
-                }; 
-            window.addEventListener('load', function() { 
-            document.querySelectorAll('.membership-card').forEach(card => { 
-            card.classList.add('loaded');
-             }); 
-         }); 
-         const lastModified = document.lastModified;
-         const formattedDate = new Date(lastModified).toLocaleString();
-         document.getElementById('lastModifiedDisplay').textContent = `Last modified: ${formattedDate}`;
-        </script> 
+    
 </body> 
 </html>
