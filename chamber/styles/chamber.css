@@ -252,7 +252,8 @@ a:hover {
     transition: transform 0.3s  ease-in-out;
 }
 .gallery-grid img:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
+    z-index: 1;
 }
 @media (max-width: 768px) {
     .discover-container {
