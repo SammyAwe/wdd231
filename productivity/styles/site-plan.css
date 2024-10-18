@@ -1,0 +1,21 @@
+body {
+     background-color: #000000;
+     color: #FFFFFF; 
+     font-family: 'Roboto', sans-serif; 
+    } 
+h1, h2 { 
+    font-family: 'Poppins', sans-serif; 
+    color: #FF6F00; 
+    } 
+nav a { 
+    color: #FFFFFF; 
+    margin: 0 5px; 
+    text-decoration: none; 
+    } 
+nav a:hover { 
+    color: #FF6F00; 
+    } 
+footer { 
+    text-align: center; 
+    margin-top: 20px; 
+    }  
