@@ -19,3 +19,13 @@ footer {
     text-align: center; 
     margin-top: 20px; 
     }  
+.wireframe-container {
+    text-align: center;
+    margin: 20px;
+    }
+.wireframe-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
